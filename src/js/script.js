@@ -4,5 +4,6 @@ const navIcon = document.querySelector(".nav-icon");
 
 toggleButton.addEventListener("click", () => {
   navigationSection.classList.toggle("hidden");
+
   navIcon.classList.toggle("fa-x");
 });
