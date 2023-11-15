@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script type="module" src="./src/js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7e6258cfd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="flex justify-between md:items-center bg-slate-900 p-4">
+      <section>
+        <a class="text-white" href="./index.html">Auction Avenue</a>
+      </section>
+      <section class="navigation">
+        <div class="toggle-butten md:hidden flex flex-row-reverse">
+          <i
+            class="fa fa-bars nav-icon text-white"
+            aria-label="Toggle Navigation Menu"
+          ></i>
+        </div>
+        <nav class="navigation-section hidden md:block">
+          <ul
+            class="navigation-list flex items-end flex-col md:flex-row gap-3 md:items-center"
+          >
+            <li><a class="text-white" href="./index.html">Auction</a></li>
+            <li><a class="text-white" href="./profile.html">Profile</a></li>
+            <li><a class="text-white" href="./sell.html">Sell</a></li>
+            <li>
+              <a
+                class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+                href="./authentication.html"
+                >Sign in</a
+              >
+            </li>
+            <li>
+              <button
+                class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+              >
+                Sign out
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+  </body>
+</html>
