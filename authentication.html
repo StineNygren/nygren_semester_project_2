@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script type="module" src="./src/js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7e6258cfd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="bg-slate-950 p-4">
+      <section class="flex justify-between md:items-center container m-auto">
+        <section>
+          <a class="text-white" href="./index.html">Auction Avenue</a>
+        </section>
+        <!-- for mobile -->
+        <section class="navigation md:hidden">
+          <div class="toggle-butten flex flex-row-reverse mt-1">
+            <i
+              class="fa fa-bars nav-icon text-white"
+              aria-label="Toggle Navigation Menu"
+            ></i>
+          </div>
+          <nav class="navigation-section hidden">
+            <ul class="navigation-list flex items-end flex-col gap-3">
+              <li><a class="text-white" href="./index.html">Auction</a></li>
+              <li><a class="text-white" href="./profile.html">Profile</a></li>
+              <li><a class="text-white" href="./sell.html">Sell</a></li>
+              <li>
+                <a
+                  class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+                  href="./authentication.html"
+                  >Sign in</a
+                >
+              </li>
+              <li>
+                <button
+                  class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+                >
+                  Sign out
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <!-- for desktop -->
+        <section class="navigation hidden md:block">
+          <nav class="navigation-section hidden md:block">
+            <ul class="navigation-list flex flex-row gap-3 items-center">
+              <li><a class="text-white" href="./index.html">Auction</a></li>
+              <li><a class="text-white" href="./profile.html">Profile</a></li>
+              <li><a class="text-white" href="./sell.html">Sell</a></li>
+            </ul>
+          </nav>
+        </section>
+        <section class="hidden md:block">
+          <a
+            class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+            href="./authentication.html"
+            >Sign in</a
+          >
+
+          <button
+            class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+          >
+            Sign out
+          </button>
+        </section>
+      </section>
+    </header>
+    <main class="m-auto">
+      <section class="flex items-center justify-center">
+        <section class="w-2/3 md:w-1/2">
+          <!-- Login form -->
+          <section class="flex flex-col items-center">
+            <h1 class="my-5">Log in</h1>
+            <form action="./index.html" class="w-full md:w-2/3">
+              <div class="relative z-0 w-full mb-6 group">
+                <input
+                  type="email"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Email address</label
+                >
+              </div>
+              <div class="relative z-0 w-full mb-6 group">
+                <input
+                  type="password"
+                  name="floating_password"
+                  id="floating_password"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_password"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Password</label
+                >
+              </div>
+              <div class="relative z-0 w-full mb-6 group">
+                <input
+                  type="password"
+                  name="repeat_password"
+                  id="floating_repeat_password"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_repeat_password"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Confirm password</label
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Log in
+              </button>
+            </form>
+          </section>
+          <!-- sign up -->
+          <!-- <section class="flex flex-col items-center hidden">
+            <h1 class="my-5">Log in</h1>
+            <form action="./index.html" class="w-full md:w-2/3">
+              <div class="relative z-0 w-full mb-6 group">
+                <input
+                  type="email"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Email address</label
+                >
+              </div>
+              <div class="relative z-0 w-full mb-6 group">
+                <input
+                  type="password"
+                  name="floating_password"
+                  id="floating_password"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_password"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Password</label
+                >
+              </div>
+              <div class="relative z-0 w-full mb-6 group">
+                <input
+                  type="password"
+                  name="repeat_password"
+                  id="floating_repeat_password"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_repeat_password"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Confirm password</label
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Log in
+              </button>
+            </form>
+          </section> -->
+        </section>
+        <section class="w-1/2 hidden md:block">
+          <img
+            class="w-full object-cover object-center h-[calc(100vh-68px)]"
+            src="./img/auth-img.png"
+            alt=""
+          />
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
