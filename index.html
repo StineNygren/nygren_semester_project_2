@@ -12,62 +12,64 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="flex justify-between md:items-center bg-slate-900 p-4">
-      <section>
-        <a class="text-white" href="./index.html">Auction Avenue</a>
-      </section>
-      <!-- for mobile -->
-      <section class="navigation md:hidden">
-        <div class="toggle-butten flex flex-row-reverse">
-          <i
-            class="fa fa-bars nav-icon text-white"
-            aria-label="Toggle Navigation Menu"
-          ></i>
-        </div>
-        <nav class="navigation-section hidden">
-          <ul class="navigation-list flex items-end flex-col gap-3">
-            <li><a class="text-white" href="./index.html">Auction</a></li>
-            <li><a class="text-white" href="./profile.html">Profile</a></li>
-            <li><a class="text-white" href="./sell.html">Sell</a></li>
-            <li>
-              <a
-                class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
-                href="./authentication.html"
-                >Sign in</a
-              >
-            </li>
-            <li>
-              <button
-                class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
-              >
-                Sign out
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </section>
-      <!-- for desktop -->
-      <section class="navigation hidden md:block">
-        <nav class="navigation-section hidden md:block">
-          <ul class="navigation-list flex flex-row gap-3 items-center">
-            <li><a class="text-white" href="./index.html">Auction</a></li>
-            <li><a class="text-white" href="./profile.html">Profile</a></li>
-            <li><a class="text-white" href="./sell.html">Sell</a></li>
-          </ul>
-        </nav>
-      </section>
-      <section class="hidden md:block">
-        <a
-          class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
-          href="./authentication.html"
-          >Sign in</a
-        >
+    <header class="bg-slate-900 p-4">
+      <section class="flex justify-between md:items-center container m-auto">
+        <section>
+          <a class="text-white" href="./index.html">Auction Avenue</a>
+        </section>
+        <!-- for mobile -->
+        <section class="navigation md:hidden">
+          <div class="toggle-butten flex flex-row-reverse mt-1">
+            <i
+              class="fa fa-bars nav-icon text-white"
+              aria-label="Toggle Navigation Menu"
+            ></i>
+          </div>
+          <nav class="navigation-section hidden">
+            <ul class="navigation-list flex items-end flex-col gap-3">
+              <li><a class="text-white" href="./index.html">Auction</a></li>
+              <li><a class="text-white" href="./profile.html">Profile</a></li>
+              <li><a class="text-white" href="./sell.html">Sell</a></li>
+              <li>
+                <a
+                  class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+                  href="./authentication.html"
+                  >Sign in</a
+                >
+              </li>
+              <li>
+                <button
+                  class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+                >
+                  Sign out
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <!-- for desktop -->
+        <section class="navigation hidden md:block">
+          <nav class="navigation-section hidden md:block">
+            <ul class="navigation-list flex flex-row gap-3 items-center">
+              <li><a class="text-white" href="./index.html">Auction</a></li>
+              <li><a class="text-white" href="./profile.html">Profile</a></li>
+              <li><a class="text-white" href="./sell.html">Sell</a></li>
+            </ul>
+          </nav>
+        </section>
+        <section class="hidden md:block">
+          <a
+            class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+            href="./authentication.html"
+            >Sign in</a
+          >
 
-        <button
-          class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
-        >
-          Sign out
-        </button>
+          <button
+            class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+          >
+            Sign out
+          </button>
+        </section>
       </section>
     </header>
   </body>
