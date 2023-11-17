@@ -1,6 +1,6 @@
 import { baseURL } from "../env/env.mjs";
 
-async function fetchBase(endPoint, method, body) {
+export async function fetchBase(endPoint, method, body) {
   try {
     const url = `${baseURL}${endPoint}`;
     const headers = {
