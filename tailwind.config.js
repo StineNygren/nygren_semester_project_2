@@ -7,7 +7,11 @@ module.exports = {
     "./src/js/**/*.mjs",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "auth-bg": "url('../../img/thing-bg.png')",
+      },
+    },
   },
   plugins: [],
 };
