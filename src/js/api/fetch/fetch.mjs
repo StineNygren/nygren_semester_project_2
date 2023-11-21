@@ -1,11 +1,12 @@
 import { baseURL } from "../env/env.mjs";
+import { jwt } from "../../utils/domElements.mjs";
 
 export async function fetchBase(endPoint, method, body) {
   try {
     const url = `${baseURL}${endPoint}`;
     const headers = {
       "Content-Type": "application/json",
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDc5LCJuYW1lIjoiVXNlciIsImVtYWlsIjoidXNlckBub3JvZmYubm8iLCJhdmF0YXIiOiJodHRwczovL21lZGlhLm1hY3BodW4uY29tL2ltZy91cGxvYWRzL2N1c3RvbWVyL2hvdy10by81NzkvMTU1MzE4NDA3MjVjOTNiNTQ4OWQ4NGU5LjQzNzgxNjIwLmpwZz9xPTg1Jnc9MTM0MCIsImNyZWRpdHMiOjEwMDAsIndpbnMiOltdLCJpYXQiOjE2OTk0NTA1MTV9.sR29hTKU-NFbEnCbFARmez3u6a9tVQwUirrkoGU2uIo`, // Add your actual token here
+      Authorization: `${jwt}`,
     };
 
     const options = {
@@ -24,6 +25,5 @@ export async function fetchBase(endPoint, method, body) {
     return result;
   } catch (error) {
     console.error(error);
-    throw error; // Re-throw the error to handle it elsewhere if needed
   }
 }
