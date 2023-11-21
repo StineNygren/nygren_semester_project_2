@@ -1,5 +1,5 @@
 import { fetchBase } from "../api/fetch/fetch.mjs";
-import { login_btn, email_input } from "../utils/domElements.mjs";
+import { login_btn, email_input, form_action } from "../utils/domElements.mjs";
 import { passwordValidation } from "./validation.mjs";
 
 login_btn.addEventListener("click", async (e) => {
@@ -12,6 +12,7 @@ login_btn.addEventListener("click", async (e) => {
   const result = await fetchBase("auth/login", "POST", postData);
   console.log(result);
   saveData(result);
+  form_action.submit();
 });
 
 //localStorage.clear();
@@ -19,5 +20,6 @@ login_btn.addEventListener("click", async (e) => {
 function saveData(result) {
   let token = result.accessToken;
   localStorage.setItem("jwt", `Bearer ` + token);
-  localStorage.setItem("personUserName", result.name);
+  localStorage.setItem("user", result.name);
+  localStorage.setItem("credit", result.credits);
 }

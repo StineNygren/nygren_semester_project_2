@@ -1,9 +1,8 @@
-const navigationSection = document.querySelector(".navigation-section");
-const toggleButton = document.querySelector(".toggle-butten");
-const navIcon = document.querySelector(".nav-icon");
+import { toggleNavigation } from "./layout/header.mjs";
 
-toggleButton.addEventListener("click", () => {
-  navigationSection.classList.toggle("hidden");
+import { navUser } from "./layout/navUser.mjs";
+import { signOut } from "./layout/signOut.mjs";
+signOut();
+navUser();
 
-  navIcon.classList.toggle("fa-x");
-});
+toggleNavigation();

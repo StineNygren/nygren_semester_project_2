@@ -58,14 +58,20 @@
             </ul>
           </nav>
         </section>
-        <section class="hidden md:block">
+
+        <section class="hidden md:flex md:items-center">
+          <p id="credit_nav" class="text-white">
+            Credits <span id="credit_count"></span>
+          </p>
           <a
+            id="signin_btn"
             class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
-            href="./authentication.html"
+            href="./auth.html"
             >Sign in</a
           >
 
           <button
+            id="signout_btn"
             class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
           >
             Sign out
@@ -81,7 +87,11 @@
           <!-- Login form -->
           <section class="flex flex-col items-center">
             <h1 class="my-5 text-2xl">Log in</h1>
-            <form action="./index.html" class="w-full md:w-2/3 flex flex-col">
+            <form
+              action="./index.html"
+              id="form_action"
+              class="w-full md:w-2/3 flex flex-col"
+            >
               <div class="relative z-0 w-full mb-6 group">
                 <input
                   type="email"
