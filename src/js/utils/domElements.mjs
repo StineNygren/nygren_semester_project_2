@@ -27,3 +27,5 @@ export const credit_count = document.querySelector("#credit_count");
 export const credit_nav = document.querySelector("#credit_nav");
 export const profile_link = document.querySelector("#profile_link");
 export const sell_link = document.querySelector("#sell_link");
+//Home
+export const listings_section = document.querySelector("#listings_section");
