@@ -29,3 +29,5 @@ export const profile_link = document.querySelector("#profile_link");
 export const sell_link = document.querySelector("#sell_link");
 //Home
 export const listings_section = document.querySelector("#listings_section");
+export const search_input = document.querySelector("#search_input");
+export const search_btn = document.querySelector("#search_btn");
