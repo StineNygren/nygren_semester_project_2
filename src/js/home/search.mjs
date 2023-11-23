@@ -12,10 +12,9 @@ async function search() {
 
   search_input.addEventListener("input", () => {
     const inputString = search_input.value.toLowerCase();
-    console.log("Input String:", inputString);
 
-    const filterSearchArray = listings.filter((element) => {
-      return element.title.toLowerCase().includes(inputString);
+    const filterSearchArray = listings.filter((listing) => {
+      return listing.title.toLowerCase().includes(inputString);
     });
     console.log("Filtered Listings Length:", filterSearchArray.length);
 

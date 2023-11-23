@@ -16,12 +16,12 @@ function displayListings(result) {
   const listingElement = document.createElement("a");
   listingElement.href = "";
   listingElement.className =
-    "border border-gray-200 rounded-lg shadow flex flex-col justify-between";
+    "border-2 border-gray-200 rounded-lg shadow flex flex-col justify-between";
 
   listingElement.innerHTML = `
-    <img class="rounded-t-lg" src="${media}" alt="" />
+    <img class="rounded-t-lg max-h-80 object-cover" src="${media}" alt="" />
     <div class="p-5">
-      <p class="text-gray-800">By ${result.seller.name}</p>
+      <p class="text-gray-600">By ${result.seller.name}</p>
       <h2 class="text-xl">${result.title}</h2>
       <p>${result.description}</p>
       <h3 class="text-center text-xl">${timeLine}</h3>
