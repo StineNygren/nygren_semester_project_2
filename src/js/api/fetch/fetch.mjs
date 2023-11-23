@@ -1,4 +1,4 @@
-import { baseURL } from "../env/env.mjs";
+import { baseURL } from "./baseURL.mjs";
 import { jwt } from "../../utils/domElements.mjs";
 
 export async function fetchBase(endPoint, method, body) {
@@ -25,5 +25,6 @@ export async function fetchBase(endPoint, method, body) {
     return result;
   } catch (error) {
     console.error(error);
+    throw error; // Rethrow the error
   }
 }

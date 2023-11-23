@@ -1,20 +1,16 @@
 import { listings_section } from "../utils/domElements.mjs";
 
 function displayListings(result) {
-  const endTime = new Date(result.endsAt);
-  endTime.toISOString();
   let media = result.media;
   if (!result.media[0]) {
     media = "https://via.placeholder.com/150";
   }
 
-  const date = endTime.toLocaleDateString();
-  const time = endTime.toLocaleTimeString();
-
   const timeLine = result.endsAt.slice(0, 10);
 
   const listingElement = document.createElement("a");
-  listingElement.href = "";
+  listingElement.href = `/listing.html?id=${result.id}`;
+
   listingElement.className =
     "border-2 border-gray-200 rounded-lg shadow flex flex-col justify-between";
 

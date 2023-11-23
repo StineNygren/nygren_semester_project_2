@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <script type="module" src="./src/js/script.js"></script>
+    <script type="module" src="./src/js/pages/home.mjs"></script>
+    <script
+      src="https://kit.fontawesome.com/7e6258cfd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="bg-slate-950 p-4">
+      <section
+        class="md:flex md:justify-between md:items-center container m-auto"
+      >
+        <section class="flex justify-between">
+          <a class="text-white" href="./index.html">Auction Avenue</a>
+          <section class="navigation md:hidden">
+            <div class="toggle-butten flex flex-row-reverse mt-1">
+              <i
+                class="fa fa-bars nav-icon text-white"
+                aria-label="Toggle Navigation Menu"
+              ></i>
+            </div>
+          </section>
+        </section>
+
+        <nav class="navigation-section hidden justify-center md:block">
+          <ul class="navigation-list md:flex md:flex-row items-center">
+            <li class="p-3">
+              <a class="text-white" href="./index.html">Auctions</a>
+            </li>
+            <li class="p-3" id="profile_link">
+              <a class="text-white" href="./profile.html">Profile</a>
+            </li>
+            <li class="p-3" id="sell_link">
+              <a class="text-white" href="./sell.html">Sell</a>
+            </li>
+          </ul>
+        </nav>
+
+        <section
+          class="md:items-center flex-col md:flex-row auth-section hidden md:flex"
+        >
+          <p id="credit_nav" class="text-white p-3 text-center">
+            Credits <span id="credit_count"></span>
+          </p>
+
+          <button
+            id="signin_btn"
+            class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+          >
+            <a href="./auth.html">Sign in</a>
+          </button>
+
+          <button
+            id="signout_btn"
+            class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+          >
+            Sign out
+          </button>
+        </section>
+      </section>
+    </header>
+  </body>
+</html>

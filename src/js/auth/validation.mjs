@@ -18,6 +18,7 @@ function passwordValidation() {
 //   const regEx = /@stud.noroff.no/;
 //   return regEx.test(email_input.value);
 // }
+// mail på slutt og valid tegn
 function emailValidation() {
   if (!email_input.value.endsWith("@stud.noroff.no")) {
     alert("Email must end with @stud.noroff.no");
