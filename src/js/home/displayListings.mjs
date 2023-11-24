@@ -15,7 +15,9 @@ function displayListings(result) {
     "border-2 border-gray-200 rounded-lg shadow flex flex-col justify-between";
 
   listingElement.innerHTML = `
-    <img class="rounded-t-lg max-h-80 object-cover" src="${media}" alt="" />
+  
+
+    <img class="rounded-t-lg h-full object-cover w-full" src="${media}" alt="" />
     <div class="p-5">
       <p class="text-gray-600">By ${result.seller.name}</p>
       <h2 class="text-xl">${result.title}</h2>
