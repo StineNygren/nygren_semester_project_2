@@ -5,14 +5,13 @@ import { search_input } from "../utils/domElements.mjs";
 import { searchFilter } from "./searchFilther.mjs";
 
 let offset = 10;
-
+//let i = 0;
 async function fetchNextPage() {
   search_input.addEventListener("input", async () => {
     offset = 10;
   });
   let limit = 10;
 
-  //let i = 0;
   if (search_input.value.length === 0) {
     console.log("if", search_input.value.length);
     const nextPageListings = await allListings(offset, limit);

@@ -11,6 +11,14 @@
       crossorigin="anonymous"
     ></script>
     <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"
+    ></script>
   </head>
   <body>
     <header class="bg-slate-950 p-4">
@@ -66,65 +74,122 @@
         </section>
       </section>
     </header>
-    <main class="md:flex flex-row md:container m-auto items-center">
-      <section class="md:w-1/2 md:mt-20">
-        <section id="image_carousel" class="">
-          <img src="./img/brush-bg.png" alt="" />
-        </section>
-        <section class="p-5">
-          <h1 class="text-2xl">Heading</h1>
-          <p class="py-2">Posted date</p>
-          <p>
-            Description: Torem ipsum dolor sit amet, consectetur adipiscing
-            elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed
-            dignissim, metus nec fringilla accumsan, risus sem sollicitudin
-            lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum
-            velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad
-            litora torquent per conubia nostra,
-          </p>
-        </section>
-      </section>
-      <section class="p-5 md:w-1/2 md:p-0">
-        <h2 class="text-center text-2xl py-5">Time Left</h2>
-        <section class="md:border-4 md:w-2/3 m-auto">
+    <main>
+      <section
+        id="listing_id_section"
+        class="md:flex flex-row md:container m-auto items-center"
+      >
+        <section class="md:w-1/2 md:mt-20">
           <section
-            class="flex gap-5 justify-center items-center border-y-4 border-t-blue-700 py-5"
+            id="carousel_img_section"
+            class="flex relative justify-between"
           >
-            <div>
-              <img class="rounded-full h-20" src="./img/thing-bg.png" alt="" />
-            </div>
-            <div>
-              <p>UserName</p>
-              <p>UserEmail</p>
-            </div>
-          </section>
-          <section>
-            <form class="py-5 md:w-2/3 m-auto">
-              <label
-                for="bid"
-                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-                >bid</label
+            <button id="prev_btn" type="button">
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
               >
-              <div class="relative">
-                <input
-                  type="number"
-                  id="bid"
-                  class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="bid"
-                  required
-                />
-                <button
-                  type="submit"
-                  class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                <svg
+                  class="w-4 h-4 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewbox="0 0 6 10"
                 >
-                  bid
-                </button>
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 1 1 5l4 4"
+                  />
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <section id="carousel_img" class=""></section>
+
+            <button id="next_btn" type="button">
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewbox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </section>
+          <section class="p-5">
+            <h1 class="text-2xl">Heading</h1>
+            <p class="py-2">Posted date</p>
+            <p>
+              Description: Torem ipsum dolor sit amet, consectetur adipiscing
+              elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed
+              dignissim, metus nec fringilla accumsan, risus sem sollicitudin
+              lacus, ut interdum tellus elit sed risus. Maecenas eget
+              condimentum velit, sit amet feugiat lectus. Class aptent taciti
+              sociosqu ad litora torquent per conubia nostra,
+            </p>
+          </section>
+        </section>
+        <section class="p-5 md:w-1/2 md:p-0">
+          <h2 class="text-center text-2xl py-5">Time Left</h2>
+          <section class="md:border-4 md:w-2/3 m-auto">
+            <section
+              class="flex gap-5 justify-center items-center border-y-4 border-t-blue-700 py-5"
+            >
+              <div>
+                <img
+                  class="rounded-full h-20"
+                  src="./img/thing-bg.png"
+                  alt=""
+                />
               </div>
-            </form>
+              <div>
+                <p>UserName</p>
+                <p>UserEmail</p>
+              </div>
+            </section>
             <section>
-              <p class="flex justify-evenly">
-                <span>UserName</span><span>Date</span><span>Amount</span>
-              </p>
+              <form class="py-5 md:w-2/3 m-auto">
+                <label
+                  for="bid"
+                  class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                  >bid</label
+                >
+                <div class="relative">
+                  <input
+                    type="number"
+                    id="bid"
+                    class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="bid"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    bid
+                  </button>
+                </div>
+              </form>
+              <section>
+                <p class="flex justify-evenly">
+                  <span>UserName</span><span>Date</span><span>Amount</span>
+                </p>
+              </section>
             </section>
           </section>
         </section>

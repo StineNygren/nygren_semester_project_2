@@ -31,3 +31,11 @@ export const sell_link = document.querySelector("#sell_link");
 export const listings_section = document.querySelector("#listings_section");
 export const search_input = document.querySelector("#search_input");
 export const search_btn = document.querySelector("#search_btn");
+//id listing
+
+export const carousel_img = document.querySelector("#carousel_img");
+export const next_btn = document.querySelector("#next_btn");
+export const prev_btn = document.querySelector("#prev_btn");
+export const carousel_img_section = document.querySelector(
+  "#carousel_img_section"
+);

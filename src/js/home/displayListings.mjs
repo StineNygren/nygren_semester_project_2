@@ -17,7 +17,7 @@ function displayListings(result) {
   listingElement.innerHTML = `
   
 
-    <img class="rounded-t-lg h-full object-cover w-full" src="${media}" alt="" />
+    <img class="rounded-t-lg h-full object-cover  w-full" src="${media}" alt="" />
     <div class="p-5">
       <p class="text-gray-600">By ${result.seller.name}</p>
       <h2 class="text-xl">${result.title}</h2>

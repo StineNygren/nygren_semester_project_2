@@ -21,5 +21,8 @@
   "homepage": "https://github.com/StineNygren/nygren_semester_project_2#readme",
   "devDependencies": {
     "tailwindcss": "^3.3.5"
+  },
+  "dependencies": {
+    "tw-elements": "^1.0.0"
   }
 }

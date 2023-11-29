@@ -1,2 +1,3 @@
-import { viewListing } from "../listing/viewListing.mjs";
-viewListing();
+import { fetchListing } from "../listing/fetchListing.mjs";
+
+fetchListing();
