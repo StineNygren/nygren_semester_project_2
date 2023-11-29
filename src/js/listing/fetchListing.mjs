@@ -1,6 +1,6 @@
 import { fetchBase } from "../api/fetch/fetch.mjs";
 import { imageCarousel } from "./imageCarousel.mjs";
-import { listingText } from "../listing/listingTexst.mjs";
+import { listingTexst } from "../listing/listingTexst.mjs";
 import { timeLeft } from "./timeLeft.mjs";
 
 const queryString = window.location.search;
@@ -14,7 +14,7 @@ async function fetchListing() {
   );
   //console.log(result);
   imageCarousel(result.media);
-  listingText(result);
+  listingTexst(result);
   timeLeft(result.endsAt);
 
   return result;

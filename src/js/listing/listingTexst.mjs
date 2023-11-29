@@ -8,7 +8,7 @@ import {
   listing_bids,
 } from "../utils/domElements.mjs";
 
-function listingText(listing) {
+function listingTexst(listing) {
   const date = listing.created.slice(0, 10);
   console.log(listing);
   listing_header.innerHTML = listing.title;
@@ -26,7 +26,7 @@ function listingText(listing) {
   bids.forEach((bid) => {
     const bid_date = bid.created.slice(0, 10);
     listing_bids.innerHTML += `
-      <div class="flex justify-between ">
+      <div class="flex justify-between py-2">
         <p>${bid.bidderName}</p>
         <p class="px-5">${bid_date}</p>
         <p>${bid.amount}</p>
@@ -35,4 +35,4 @@ function listingText(listing) {
   });
 }
 
-export { listingText };
+export { listingTexst };
