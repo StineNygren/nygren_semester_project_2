@@ -30,7 +30,6 @@ function prevSlide() {
 
 prevSlide();
 nextSlide();
-console.log(carousel_img_section);
 
 function imageCarousel(images) {
   if (images.length === 1) {

@@ -11,14 +11,14 @@
       crossorigin="anonymous"
     ></script>
     <title>Document</title>
-    <link
+    <!-- <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
       rel="stylesheet"
     />
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"
-    ></script>
+    ></script> -->
   </head>
   <body>
     <header class="bg-slate-950 p-4">
@@ -132,34 +132,27 @@
             </button>
           </section>
           <section class="p-5">
-            <h1 class="text-2xl">Heading</h1>
-            <p class="py-2">Posted date</p>
-            <p>
-              Description: Torem ipsum dolor sit amet, consectetur adipiscing
-              elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed
-              dignissim, metus nec fringilla accumsan, risus sem sollicitudin
-              lacus, ut interdum tellus elit sed risus. Maecenas eget
-              condimentum velit, sit amet feugiat lectus. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra,
-            </p>
+            <h1 id="listing_header" class="text-2xl"></h1>
+            <p id="listing_posted" class="py-2"></p>
+            <p id="listing_description"></p>
           </section>
         </section>
         <section class="p-5 md:w-1/2 md:p-0">
-          <h2 class="text-center text-2xl py-5">Time Left</h2>
+          <h2 id="time_left" class="text-center text-2xl py-5">Time Left</h2>
           <section class="md:border-4 md:w-2/3 m-auto">
             <section
               class="flex gap-5 justify-center items-center border-y-4 border-t-blue-700 py-5"
             >
               <div>
                 <img
+                  id="listing_user_avatar"
                   class="rounded-full h-20"
-                  src="./img/thing-bg.png"
-                  alt=""
+                  alt="Seller Avatar"
                 />
               </div>
               <div>
-                <p>UserName</p>
-                <p>UserEmail</p>
+                <p id="listing_user_name"></p>
+                <p id="listing_user_email"></p>
               </div>
             </section>
             <section>

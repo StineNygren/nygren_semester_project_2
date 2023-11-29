@@ -11,6 +11,7 @@ async function allListings(offset, limit) {
     displayListings(listing);
   });
   console.log(result);
+
   return result;
 }
 export { allListings };

@@ -39,3 +39,14 @@ export const prev_btn = document.querySelector("#prev_btn");
 export const carousel_img_section = document.querySelector(
   "#carousel_img_section"
 );
+export const listing_header = document.querySelector("#listing_header");
+export const listing_description = document.querySelector(
+  "#listing_description"
+);
+export const listing_posted = document.querySelector("#listing_posted");
+export const time_left = document.querySelector("#time_left");
+export const listing_user_name = document.querySelector("#listing_user_name");
+export const listing_user_email = document.querySelector("#listing_user_email");
+export const listing_user_avatar = document.querySelector(
+  "#listing_user_avatar"
+);
