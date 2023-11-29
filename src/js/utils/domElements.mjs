@@ -50,3 +50,6 @@ export const listing_user_email = document.querySelector("#listing_user_email");
 export const listing_user_avatar = document.querySelector(
   "#listing_user_avatar"
 );
+export const bid_input = document.querySelector("#bid_input");
+export const bid_btn = document.querySelector("#bid_btn");
+export const listing_bids = document.querySelector("#listing_bids");

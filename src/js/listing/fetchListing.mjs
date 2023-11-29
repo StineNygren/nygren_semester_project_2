@@ -8,8 +8,11 @@ const urlParams = new URLSearchParams(queryString);
 let postId = urlParams.get("id");
 
 async function fetchListing() {
-  const result = await fetchBase(`listings/${postId}?_seller=true`, "GET");
-  console.log(result);
+  const result = await fetchBase(
+    `listings/${postId}?_seller=true&_bids=true`,
+    "GET"
+  );
+  //console.log(result);
   imageCarousel(result.media);
   listingText(result);
   timeLeft(result.endsAt);
