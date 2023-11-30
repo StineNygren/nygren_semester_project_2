@@ -6,20 +6,21 @@ import {
 import { displayListings } from "./displayListings.mjs";
 import { allListings } from "./allListings.mjs";
 import { searchFilter } from "./searchFilther.mjs";
+import { fetchNextPage } from "./nextPage.mjs";
 
 async function search() {
   search_input.addEventListener("input", async () => {
     const listings = await allListings(0, 10);
     const filteredListings = searchFilter(listings);
-    console.log(filteredListings);
+    console.log(filteredListings.length);
 
-    // Clear previous listings
     listings_section.innerHTML = "";
-
-    // Display the filtered listings
-    filteredListings.forEach((listing) => {
-      displayListings(listing);
-    });
+    fetchNextPage();
+    let i = 0;
+    while (i < 10 && filteredListings.length < 10) {
+      i++;
+      await fetchNextPage();
+    }
   });
 }
 

@@ -7,9 +7,9 @@ async function allListings(offset, limit) {
     `listings?limit=${limit}&offset=${offset}&_seller=true`,
     "GET"
   );
-  result.forEach((listing) => {
-    displayListings(listing);
-  });
+  // result.forEach((listing) => {
+  //   displayListings(listing);
+  // });
   console.log(result);
 
   return result;
