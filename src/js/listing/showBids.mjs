@@ -6,6 +6,7 @@ function showBids(result) {
   const bids = result.bids;
   bids.sort((a, b) => new Date(b.created) - new Date(a.created));
   console.log(listing_bids);
+  console.log("yes it is");
 
   listing_bids.innerHTML = "";
 

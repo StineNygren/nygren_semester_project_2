@@ -6,7 +6,9 @@ import {
   listing_user_name,
   listing_user_avatar,
   listing_bids,
+  bid_btn,
 } from "../utils/domElements.mjs";
+import { showBids } from "./showBids.mjs";
 
 function listingTexst(listing) {
   const date = listing.created.slice(0, 10);
@@ -18,21 +20,23 @@ function listingTexst(listing) {
   listing_user_email.innerHTML = listing.seller.email;
   listing_user_avatar.src = listing.seller.avatar;
 
-  const bids = listing.bids;
-  console.log(bids);
+  showBids(listing);
 
-  bids.sort((a, b) => new Date(b.created) - new Date(a.created));
+  // const bids = listing.bids;
+  // console.log(bids);
 
-  bids.forEach((bid) => {
-    const bid_date = bid.created.slice(0, 10);
-    listing_bids.innerHTML += `
-      <div class="flex justify-between py-2">
-        <p>${bid.bidderName}</p>
-        <p class="px-5">${bid_date}</p>
-        <p>${bid.amount}</p>
-      </div>
-      `;
-  });
+  // bids.sort((a, b) => new Date(b.created) - new Date(a.created));
+
+  // bids.forEach((bid) => {
+  //   const bid_date = bid.created.slice(0, 10);
+  //   listing_bids.innerHTML += `
+  //     <div class="flex justify-between py-2">
+  //       <p>${bid.bidderName}</p>
+  //       <p class="px-5">${bid_date}</p>
+  //       <p>${bid.amount}</p>
+  //     </div>
+  //     `;
+  // });
 }
 
 export { listingTexst };

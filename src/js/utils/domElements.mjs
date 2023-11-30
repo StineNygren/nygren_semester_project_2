@@ -32,7 +32,6 @@ export const listings_section = document.querySelector("#listings_section");
 export const search_input = document.querySelector("#search_input");
 export const search_btn = document.querySelector("#search_btn");
 //id listing
-
 export const carousel_img = document.querySelector("#carousel_img");
 export const next_btn = document.querySelector("#next_btn");
 export const prev_btn = document.querySelector("#prev_btn");
@@ -53,3 +52,9 @@ export const listing_user_avatar = document.querySelector(
 export const bid_input = document.querySelector("#bid_input");
 export const bid_btn = document.querySelector("#bid_btn");
 export const listing_bids = document.querySelector("#listing_bids");
+//Sell
+export const add_img_btn = document.querySelector("#add_img_btn");
+export const url_input = document.querySelector("#url_input");
+export const url_input_container = document.querySelector(
+  "#url_input_container"
+);
