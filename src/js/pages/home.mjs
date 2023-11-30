@@ -1,8 +1,8 @@
-import { allListings } from "../home/allListings.mjs";
+//import { allListings } from "../home/allListings.mjs";
 import { search } from "../home/search.mjs";
-//import { fetchNextPage } from "../home/nextPage.mjs";
+import { fetchNextPage } from "../home/nextPage.mjs";
 import { scrollHandler } from "../home/scrollHandler.mjs";
-//fetchNextPage();
+fetchNextPage();
 scrollHandler();
 search();
-allListings(0, 10);
+//allListings(0, 10);
