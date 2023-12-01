@@ -19,6 +19,7 @@ function placeBid() {
       amount: bidValue,
     };
     const result = await fetchBase(`listings/${postId}/bids`, "POST", body);
+
     console.log(body);
     console.log(result);
     window.location.reload();

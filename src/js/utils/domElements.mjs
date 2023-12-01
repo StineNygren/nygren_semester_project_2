@@ -1,4 +1,5 @@
 export const jwt = localStorage.getItem("jwt");
+export const user = localStorage.getItem("user");
 //Auth
 export const login_btn = document.querySelector("#login_btn");
 export const email_input = document.querySelector("#email_input");
@@ -62,3 +63,16 @@ export const date_input = document.querySelector("#date_input");
 export const description_input = document.querySelector("#description_input");
 export const title_input = document.querySelector("#title_input");
 export const post_listing_btn = document.querySelector("#post_listing_btn");
+//profile
+export const profile_name = document.querySelector("#profile_name");
+export const profile_avatar = document.querySelector("#profile_avatar");
+export const profile_email = document.querySelector("#profile_email");
+export const profile_display = document.querySelector("#profile_display");
+export const profile_avatar_container = document.querySelector(
+  "#profile_avatar_container"
+);
+export const avatar_modal = document.querySelector("#avatar_modal");
+export const avatar_modal_content = document.querySelector(
+  "#avatar_modal_content"
+);
+export const edit_avatar_btn = document.querySelector("#edit_avatar_btn");
