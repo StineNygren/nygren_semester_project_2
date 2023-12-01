@@ -58,3 +58,7 @@ export const url_input = document.querySelector("#url_input");
 export const url_input_container = document.querySelector(
   "#url_input_container"
 );
+export const date_input = document.querySelector("#date_input");
+export const description_input = document.querySelector("#description_input");
+export const title_input = document.querySelector("#title_input");
+export const post_listing_btn = document.querySelector("#post_listing_btn");
