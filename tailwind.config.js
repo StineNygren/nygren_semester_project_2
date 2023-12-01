@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "home-bg": "url('./img/brush-bg.png')",
-        "sell-bg": "url('./img/big-bg.png')",
+        "home-bg": "url('../img/brush-bg.png')",
+        "sell-bg": "url('../img/big-bg.png')",
       },
     },
   },
