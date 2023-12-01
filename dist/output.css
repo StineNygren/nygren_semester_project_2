@@ -1723,10 +1723,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   .sm\:max-w-\[604px\] {
     max-width: 604px;
   }
-
-  .sm\:rounded-md {
-    border-radius: 0.375rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1793,10 +1789,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 
   .md\:p-0 {
     padding: 0px;
-  }
-
-  .md\:p-5 {
-    padding: 1.25rem;
   }
 }
 
