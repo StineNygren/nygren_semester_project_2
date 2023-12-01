@@ -1112,11 +1112,11 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 .bg-home-bg {
-  background-image: url('../../img/brush-bg.png');
+  background-image: url('./img/brush-bg.png');
 }
 
 .bg-sell-bg {
-  background-image: url('../../img/big-bg.png');
+  background-image: url('./img/big-bg.png');
 }
 
 .bg-cover {
