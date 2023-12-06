@@ -13,10 +13,10 @@ function showBids(result) {
   bids.forEach((bid) => {
     const bid_date = bid.created.slice(0, 10);
     listing_bids.innerHTML += `
-          <div class="flex justify-between ">
-            <p>${bid.bidderName}</p>
-            <p class="px-5">${bid_date}</p>
-            <p>${bid.amount}</p>
+          <div class="grid  grid-cols-7 gap-3">
+            <p class="overflow-hidden col-span-3">${bid.bidderName}</p>
+            <p class=" overflow-hidden col-span-3">${bid_date}</p>
+            <p class="overflow-hidden">${bid.amount}</p>
           </div>
           `;
   });

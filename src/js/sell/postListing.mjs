@@ -28,6 +28,8 @@ function postListing() {
 
     const result = await fetchBase("listings", "POST", body);
     console.log(result);
+
+    window.location.href = `./listing.html?id=${result.id}`;
   });
 }
 

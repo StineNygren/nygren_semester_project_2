@@ -4,7 +4,7 @@ import { displayListings } from "./displayListings.mjs";
 async function allListings(offset, limit) {
   console.log("get listing offset", offset);
   const result = await fetchBase(
-    `listings?limit=${limit}&offset=${offset}&_seller=true`,
+    `listings?limit=${limit}&offset=${offset}&_seller=true&_active=true&sort=endsAt&sortOrder=asc`,
     "GET"
   );
   // result.forEach((listing) => {

@@ -84,12 +84,14 @@
                   type="email"
                   name="login_email_input"
                   id="login_email_input"
+                  aria-labelledby="login_email_label"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="login_email_input"
+                  id="login_email_label"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >Email address</label
                 >
@@ -99,19 +101,25 @@
                   type="password"
                   name="login_password_input"
                   id="login_password_input"
+                  aria-labelledby="login_password_label"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="login_password_input"
+                  id="login_password_label"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >Password</label
                 >
+                <p id="login_error" class="text-red-600 hidden">
+                  Invalid email or password
+                </p>
               </div>
 
               <button
                 type="submit"
+                role="button"
                 id="login_btn"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
@@ -120,7 +128,11 @@
             </form>
             <section>
               <p class="text-center">or</p>
-              <button id="register_open" class="text-blue-700 underline">
+              <button
+                role="button"
+                id="register_open"
+                class="text-blue-700 underline"
+              >
                 Register
               </button>
             </section>
@@ -134,26 +146,31 @@
                   type="text"
                   name="name_input"
                   id="name_input"
+                  aria-labelledby="name_label"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="name_input"
+                  id="name_label"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >Name</label
                 >
+                <p id="name_error" class="text-red-600"></p>
               </div>
               <div class="relative z-0 w-full mb-6 group">
                 <input
                   type="url"
                   name="avatar_input"
                   id="avatar_input"
+                  aria-labelledby="avatar_label"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                 />
                 <label
                   for="avatar_input"
+                  id="avatar_label"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >Avatar</label
                 >
@@ -163,27 +180,32 @@
                   type="email"
                   name="email_input"
                   id="email_input"
+                  aria-labelledby="email_label"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="email_input"
+                  id="email_label"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >Email address</label
                 >
+                <p id="email_error" class="text-red-600"></p>
               </div>
               <div class="relative z-0 w-full mb-6 group">
                 <input
                   type="password"
                   name="password_input"
                   id="password_input"
+                  aria-labelledby="password_label"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="password_input"
+                  id="password_label"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >Password</label
                 >
@@ -193,19 +215,23 @@
                   type="password"
                   name="repeat_password_input"
                   id="repeat_password_input"
+                  aria-labelledby="repeat_password_label"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="repeat_password_input"
+                  id="repeat_password_label"
                   class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >Confirm password</label
                 >
+                <p id="password_error" class="text-red-600"></p>
               </div>
 
               <button
                 type="submit"
+                role="button"
                 id="register_btn"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
@@ -214,15 +240,19 @@
             </form>
             <section>
               <p class="text-center">or</p>
-              <button id="login_open" class="text-blue-700 underline">
+              <button
+                role="button"
+                id="login_open"
+                class="text-blue-700 underline"
+              >
                 Login
               </button>
             </section>
           </section>
         </section>
-        <section class="w-1/2 hidden md:block">
+        <section class="w-1/2 hidden md:block bg-auth-bg h-full bg-cover">
           <img
-            class="object-cover rounded-e-md"
+            class="object-cover rounded-e-md h-full w-full"
             src="./img/thing-bg.png"
             alt=""
           />

@@ -137,11 +137,12 @@ function displayListings(result) {
     }
 
     const titleHeader = document.createElement("h2");
-    titleHeader.className = "text-xl";
+    titleHeader.className = "text-xl overflow-scroll max-h-14";
     titleHeader.textContent = result.title;
 
     const descriptionParagraph = document.createElement("p");
     descriptionParagraph.textContent = result.description;
+    descriptionParagraph.className = "max-h-20 overflow-scroll";
 
     const timelineHeader = document.createElement("h3");
     timelineHeader.className = "text-center text-xl";

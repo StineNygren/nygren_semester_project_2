@@ -4,9 +4,10 @@ import {
   login_email_input,
   form_action,
   login_password_input,
+  login_error,
 } from "../utils/domElements.mjs";
 
-function logIn() {
+async function logIn() {
   login_btn.addEventListener("click", async (e) => {
     e.preventDefault();
     const body = {
@@ -14,10 +15,15 @@ function logIn() {
       password: login_password_input.value,
     };
 
-    const result = await fetchBase("auth/login", "POST", body);
-    console.log(result);
-    saveData(result);
-    form_action.submit();
+    try {
+      const result = await fetchBase("auth/login", "POST", body);
+      console.log(result);
+      saveData(result);
+      form_action.submit();
+    } catch (error) {
+      login_error.classList.remove("hidden");
+      console.error(error);
+    }
   });
 }
 

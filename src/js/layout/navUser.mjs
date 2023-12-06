@@ -3,11 +3,13 @@ import {
   signout_btn,
   jwt,
   credit_count,
+  user,
   credit_nav,
   profile_link,
   sell_link,
 } from "../utils/domElements.mjs";
-function navUser() {
+import { getProfile } from "../profile/getProfile.mjs";
+async function navUser() {
   if (!jwt) {
     credit_nav.classList.add("hidden");
     signout_btn.classList.add("hidden");
@@ -15,7 +17,8 @@ function navUser() {
     profile_link.classList.add("hidden");
     sell_link.classList.add("hidden");
   } else {
-    credit_count.innerHTML = localStorage.getItem("credit");
+    const credit = await getProfile(`profiles/${user}/credits`);
+    credit_count.innerHTML = credit.credits;
     credit_nav.classList.remove("hidden");
     signout_btn.classList.remove("hidden");
     signin_btn.classList.add("hidden");
