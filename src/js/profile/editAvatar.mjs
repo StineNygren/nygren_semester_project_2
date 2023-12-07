@@ -2,7 +2,6 @@ import {
   profile_avatar_container,
   user,
   avatar_modal,
-  avatar_modal_content,
   edit_avatar_btn,
   avatar_input,
 } from "../utils/domElements.mjs";
@@ -17,7 +16,6 @@ function editAvatar() {
       avatar: avatar_input.value,
     };
     const result = await fetchBase(`profiles/${user}/media`, "PUT", body);
-    console.log(result);
     avatar_input.value = "";
     avatar_modal.classList.toggle("hidden");
     avatar_modal.classList.toggle("flex");
@@ -26,18 +24,20 @@ function editAvatar() {
 }
 
 function modal() {
-  profile_avatar_container.addEventListener("click", (e) => {
+  const modalToggle = (e) => {
     e.preventDefault();
-    console.log("modal");
     avatar_modal.classList.toggle("hidden");
     avatar_modal.classList.toggle("flex");
-  });
-  window.onclick = function (event) {
-    if (event.target == avatar_modal) {
+  };
+
+  profile_avatar_container.addEventListener("click", modalToggle);
+
+  document.body.addEventListener("click", (event) => {
+    if (event.target === avatar_modal) {
       avatar_modal.classList.toggle("hidden");
       avatar_modal.classList.toggle("flex");
     }
-  };
+  });
 }
 
 export { editAvatar, modal };

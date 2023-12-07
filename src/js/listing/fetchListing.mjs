@@ -13,8 +13,7 @@ async function fetchListing() {
     `listings/${postId}?_seller=true&_bids=true`,
     "GET"
   );
-  //console.log(result);
-  imageCarousel(result.media);
+  imageCarousel(result.media, result.title);
   listingTexst(result);
   timeLeft(result.endsAt);
   placeBid(result.bids);

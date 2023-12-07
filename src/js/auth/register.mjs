@@ -1,9 +1,5 @@
 import { fetchBase } from "../api/fetch/fetch.mjs";
-import {
-  register_btn,
-  name_input,
-  avatar_input,
-} from "../utils/domElements.mjs";
+import { register_btn, avatar_input } from "../utils/domElements.mjs";
 import { toggleHidden } from "./registerToggel.mjs";
 import {
   passwordValidation,

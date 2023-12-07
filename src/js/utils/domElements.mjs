@@ -35,7 +35,7 @@ export const sell_link = document.querySelector("#sell_link");
 //Home
 export const listings_section = document.querySelector("#listings_section");
 export const search_input = document.querySelector("#search_input");
-export const search_btn = document.querySelector("#search_btn");
+
 //id listing
 export const bid_error = document.querySelector("#bid_error");
 export const carousel_img = document.querySelector("#carousel_img");
@@ -77,7 +77,4 @@ export const profile_avatar_container = document.querySelector(
   "#profile_avatar_container"
 );
 export const avatar_modal = document.querySelector("#avatar_modal");
-export const avatar_modal_content = document.querySelector(
-  "#avatar_modal_content"
-);
 export const edit_avatar_btn = document.querySelector("#edit_avatar_btn");

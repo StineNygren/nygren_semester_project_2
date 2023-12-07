@@ -6,12 +6,8 @@ import {
 } from "../utils/domElements.mjs";
 
 function registerToggel() {
-  register_open.addEventListener("click", () => {
-    toggleHidden();
-  });
-  login_open.addEventListener("click", () => {
-    toggleHidden();
-  });
+  register_open.addEventListener("click", toggleHidden);
+  login_open.addEventListener("click", toggleHidden);
 }
 
 function toggleHidden() {

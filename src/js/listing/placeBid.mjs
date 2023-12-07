@@ -1,7 +1,6 @@
 import {
   bid_btn,
   bid_input,
-  listing_bids,
   jwt,
   bid_error,
   user,
