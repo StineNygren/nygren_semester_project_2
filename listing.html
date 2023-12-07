@@ -10,7 +10,11 @@
       src="https://kit.fontawesome.com/7e6258cfd5.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Bid with confidence at Auction Avenue! Immerse yourself in the excitement of exclusive listings. Place your bids and engage in the thrill of winning"
+    />
+    <title>Auction Avenue | Listing</title>
     <!-- <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
       rel="stylesheet"
@@ -166,21 +170,26 @@
                   <input
                     type="number"
                     id="bid_input"
+                    aria-label="Bid Amount"
                     class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="bid"
+                    placeholder="Enter your bid amount"
                     required
                   />
                   <button
                     id="bid_btn"
                     type="submit"
-                    class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
                   >
                     bid
                   </button>
                 </div>
+                <div id="bid_error" class="text-red-600 mt-1"></div>
               </form>
               <section>
-                <p id="listing_bids" class="p-5"></p>
+                <p
+                  id="listing_bids"
+                  class="p-5 overflow-y-scroll max-h-40 m-auto"
+                ></p>
               </section>
             </section>
           </section>

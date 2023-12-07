@@ -10,7 +10,11 @@
       src="https://kit.fontawesome.com/7e6258cfd5.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <meta
+      name="description"
+      content=" Easily list your goods on Auction Avenue and expose them to a global audience. Start the auction, set the stage for bidding wars, and let the excitement unfold."
+    />
+    <title>Auction Avenue | Sell</title>
   </head>
   <body class="h-screen flex flex-col bg-sell-bg bg-no-repeat">
     <header class="bg-slate-950 p-4">
@@ -74,6 +78,7 @@
             <input
               type="text"
               name="title_input"
+              aria-labelledby="title_label"
               id="title_input"
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
@@ -81,6 +86,7 @@
             />
             <label
               for="title_input"
+              id="title_label"
               class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >Title</label
             >
@@ -90,6 +96,7 @@
               rows="1"
               cols="50"
               name="description_input"
+              aria-labelledby="description_label"
               id="description_input"
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
@@ -97,6 +104,7 @@
 
             <label
               for="description_input"
+              id="description_label"
               class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >Description</label
             >
@@ -104,6 +112,7 @@
           <div class="relative z-0 w-full mb-6 group">
             <input
               type="datetime-local"
+              aria-label="date input"
               name="date_input"
               id="date_input"
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -115,6 +124,7 @@
             <div class="relative z-0 w-full mb-6 group">
               <input
                 type="url"
+                aria-labelledby="url_label"
                 name="url_input[]"
                 id="url_input"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -122,6 +132,7 @@
               />
               <label
                 for="url_input"
+                id="url_label"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >image URL</label
               >

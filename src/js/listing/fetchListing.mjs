@@ -2,6 +2,7 @@ import { fetchBase } from "../api/fetch/fetch.mjs";
 import { imageCarousel } from "./imageCarousel.mjs";
 import { listingTexst } from "../listing/listingTexst.mjs";
 import { timeLeft } from "./timeLeft.mjs";
+import { placeBid } from "./placeBid.mjs";
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -12,10 +13,10 @@ async function fetchListing() {
     `listings/${postId}?_seller=true&_bids=true`,
     "GET"
   );
-  //console.log(result);
-  imageCarousel(result.media);
+  imageCarousel(result.media, result.title);
   listingTexst(result);
   timeLeft(result.endsAt);
+  placeBid(result.bids);
 
   return result;
 }

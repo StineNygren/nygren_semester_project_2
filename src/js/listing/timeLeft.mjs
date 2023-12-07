@@ -1,5 +1,9 @@
 import { time_left } from "../utils/domElements.mjs";
 
+/**
+ * Calculates the time left until the specified end date and updates the HTML element with the remaining time.
+ * @param {string} endDate - The end date in string format.
+ */
 function timeLeft(endDate) {
   console.log(endDate);
 

@@ -21,6 +21,10 @@ export const register_btn = document.querySelector("#register_btn");
 
 export const name_input = document.querySelector("#name_input");
 export const avatar_input = document.querySelector("#avatar_input");
+export const login_error = document.querySelector("#login_error");
+export const password_error = document.querySelector("#password_error");
+export const email_error = document.querySelector("#email_error");
+export const name_error = document.querySelector("#name_error");
 //Nav
 export const signin_btn = document.querySelector("#signin_btn");
 export const signout_btn = document.querySelector("#signout_btn");
@@ -31,8 +35,9 @@ export const sell_link = document.querySelector("#sell_link");
 //Home
 export const listings_section = document.querySelector("#listings_section");
 export const search_input = document.querySelector("#search_input");
-export const search_btn = document.querySelector("#search_btn");
+
 //id listing
+export const bid_error = document.querySelector("#bid_error");
 export const carousel_img = document.querySelector("#carousel_img");
 export const next_btn = document.querySelector("#next_btn");
 export const prev_btn = document.querySelector("#prev_btn");
@@ -72,7 +77,4 @@ export const profile_avatar_container = document.querySelector(
   "#profile_avatar_container"
 );
 export const avatar_modal = document.querySelector("#avatar_modal");
-export const avatar_modal_content = document.querySelector(
-  "#avatar_modal_content"
-);
 export const edit_avatar_btn = document.querySelector("#edit_avatar_btn");

@@ -18,9 +18,8 @@ export async function fetchBase(endPoint, method, body) {
     const response = await fetch(url, options);
 
     if (!response.ok) {
-      console.error(
-        `HTTP error! Status: ${response.status}, Message: ${errorText}`
-      );
+      console.error(`HTTP error! Status: ${response.status}`);
+
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 

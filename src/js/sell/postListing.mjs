@@ -4,7 +4,6 @@ import {
   date_input,
   description_input,
   title_input,
-  url_input,
   url_input_container,
 } from "../utils/domElements.mjs";
 
@@ -12,7 +11,6 @@ function postListing() {
   post_listing_btn.addEventListener("click", async (e) => {
     e.preventDefault();
 
-    // Collect image URLs into an array
     const imageInputs = Array.from(
       url_input_container.querySelectorAll("input[name='url_input[]']")
     );
@@ -24,10 +22,10 @@ function postListing() {
       endsAt: date_input.value,
       media: imageUrls,
     };
-    //console.log(body);
 
     const result = await fetchBase("listings", "POST", body);
-    console.log(result);
+
+    window.location.href = `./listing.html?id=${result.id}`;
   });
 }
 
