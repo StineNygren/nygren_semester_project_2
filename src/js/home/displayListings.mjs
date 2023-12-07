@@ -31,7 +31,7 @@ function displayListings(result) {
     const divElement = document.createElement("div");
     divElement.className = "p-5";
 
-    if (window.location.pathname !== "/profile.html") {
+    if (!window.location.pathname.includes("/profile.html")) {
       const sellerParagraph = document.createElement("p");
       sellerParagraph.className = "text-gray-600";
       sellerParagraph.textContent = `By ${result.seller.name}`;
