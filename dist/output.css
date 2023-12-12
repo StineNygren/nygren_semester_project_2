@@ -44,7 +44,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Roboto, sans-serif;
+  font-family: "Noto Sans", sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -781,11 +781,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-bottom: 2.5rem;
 }
 
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -797,6 +792,10 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .mb-3 {

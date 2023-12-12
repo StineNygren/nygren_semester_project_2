@@ -1,8 +1,9 @@
 import { signout_btn } from "../utils/domElements.mjs";
+import { clearLocalStorage } from "./clearLocalStorage.js";
 
 function signOut() {
   signout_btn.addEventListener("click", () => {
-    localStorage.clear();
+    clearLocalStorage();
     window.location.href = "./index.html";
   });
 }
