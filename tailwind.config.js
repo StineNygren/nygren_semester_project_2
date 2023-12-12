@@ -15,6 +15,9 @@ module.exports = {
         "home-bg": "url('../img/brush-bg.png')",
         "sell-bg": "url('../img/big-bg.png')",
       },
+      fontFamily: {
+        sans: ['"Noto Sans"', "sans-serif"],
+      },
     },
   },
   plugins: [require("tw-elements/dist/plugin")],

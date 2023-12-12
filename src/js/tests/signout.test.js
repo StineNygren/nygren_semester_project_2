@@ -1,4 +1,4 @@
-import { clearLocalStorage } from "../layout/clearLocalStorage.mjs";
+import { clearLocalStorage } from "../layout/clearLocalStorage.js";
 import "jest-localstorage-mock";
 
 describe("logout function", () => {
