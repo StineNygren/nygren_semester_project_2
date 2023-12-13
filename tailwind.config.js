@@ -12,8 +12,8 @@ module.exports = {
         // "home-bg": "url('../../img/brush-bg.webp')",
         // "sell-bg": "url('../../img/blue-bg.webp')",
 
-        "home-bg": "url('../img/brush-bg.png')",
-        "sell-bg": "url('../img/big-bg.png')",
+        "home-bg": "url('../img/brush-bg.webp')",
+        "sell-bg": "url('../img/blue-bg.webp')",
       },
       fontFamily: {
         sans: ['"Noto Sans"', "sans-serif"],

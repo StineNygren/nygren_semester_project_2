@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -36,13 +36,19 @@
         <nav class="navigation-section hidden justify-center md:block">
           <ul class="navigation-list md:flex md:flex-row items-center">
             <li class="p-3">
-              <a class="text-white" href="./index.html">Auctions</a>
+              <a class="text-white hover:text-blue-500" href="./index.html"
+                >Auctions</a
+              >
             </li>
             <li class="p-3" id="profile_link">
-              <a class="text-white" href="./profile.html">Profile</a>
+              <a class="text-white hover:text-blue-500" href="./profile.html"
+                >Profile</a
+              >
             </li>
             <li class="p-3" id="sell_link">
-              <a class="text-white" href="./sell.html">Sell</a>
+              <a class="text-white hover:text-blue-500" href="./sell.html"
+                >Sell</a
+              >
             </li>
           </ul>
         </nav>
@@ -56,21 +62,21 @@
 
           <button
             id="signin_btn"
-            class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+            class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white hover:text-blue-500"
           >
             <a href="./auth.html">Sign in</a>
           </button>
 
           <button
             id="signout_btn"
-            class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white"
+            class="border-blue-500 border-2 py-1 px-2 rounded-sm text-white hover:text-blue-500"
           >
             Sign out
           </button>
         </section>
       </section>
     </header>
-    <main class="">
+    <main>
       <div
         id="avatar_modal"
         class="modal fixed z-50 bg-black bg-opacity-50 w-screen h-screen hidden justify-center items-center"
@@ -115,7 +121,9 @@
               class="rounded-full w-28 h-28"
               alt="Avatar image"
             />
-            <div class="absolute bg-blue-700 rounded-full bottom-0 right-0 p-2">
+            <div
+              class="absolute bg-blue-700 rounded-full bottom-2 right-1 p-2 h-8 w-8 flex justify-center items-center cursor-pointer"
+            >
               <i
                 class="fa-regular fa-pen-to-square text-white aspect-square"
               ></i>

@@ -17,11 +17,17 @@ async function logIn() {
 
     try {
       const result = await fetchBase("auth/login", "POST", body);
+
+      if (result.status === "Bad Request" || result.status === "Unauthorized") {
+        login_error.classList.remove("hidden");
+        console.log(result.errors[0]);
+      } else {
+        saveData(result);
+        form_action.submit();
+      }
+
       console.log(result);
-      saveData(result);
-      form_action.submit();
     } catch (error) {
-      login_error.classList.remove("hidden");
       console.error(error);
     }
   });

@@ -5,6 +5,7 @@ import {
   listing_user_email,
   listing_user_name,
   listing_user_avatar,
+  avatar_img,
 } from "../utils/domElements.mjs";
 import { showBids } from "./showBids.mjs";
 
@@ -17,8 +18,7 @@ function listingTexst(listing) {
   listing_user_name.textContent = listing.seller.name;
   listing_user_email.textContent = listing.seller.email;
   if (!listing.seller.avatar) {
-    listing_user_avatar.src =
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC6iPDSqcgCcAtdEz_rPY0B-sxqMd7hz0Hlg&usqp=CAU";
+    listing_user_avatar.src = avatar_img;
   } else {
     listing_user_avatar.src = listing.seller.avatar;
   }

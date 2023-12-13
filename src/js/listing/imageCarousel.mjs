@@ -3,6 +3,7 @@ import {
   next_btn,
   prev_btn,
   carousel_img_section,
+  default_img,
 } from "../utils/domElements.mjs";
 import { fetchListing } from "./fetchListing.mjs";
 import { imageCheck } from "../home/imageCheck.mjs";
@@ -62,8 +63,7 @@ async function imageCarousel(images, title) {
       if (!exists) {
         console.error("Image does not exist.");
 
-        images[imageIndex] =
-          "https://images.unsplash.com/photo-1633544325196-bcf8bf81ead0?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+        images[imageIndex] = default_img;
       }
       resolve(images[imageIndex]);
     });
