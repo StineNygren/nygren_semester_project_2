@@ -1,4 +1,4 @@
-import { listings_section } from "../utils/domElements.mjs";
+import { listings_section, default_img } from "../utils/domElements.mjs";
 import { imageCheck } from "./imageCheck.mjs";
 
 function displayListings(result) {
@@ -8,8 +8,7 @@ function displayListings(result) {
     imageCheck(result.media[0], (exists) => {
       if (!exists) {
         console.error("Image does not exist.");
-        media =
-          "https://images.unsplash.com/photo-1633544325196-bcf8bf81ead0?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+        media = default_img;
       }
       resolve(media);
     });

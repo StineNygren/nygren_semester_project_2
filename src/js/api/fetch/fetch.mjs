@@ -16,17 +16,18 @@ export async function fetchBase(endPoint, method, body) {
     };
 
     const response = await fetch(url, options);
+    console.log(response.status);
 
     if (!response.ok) {
       console.error(`HTTP error! Status: ${response.status}`);
 
-      throw new Error(`HTTP error! Status: ${response.status}`);
+      //  throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     const result = await response.json();
     return result;
   } catch (error) {
     console.error(error);
-    throw error; // Rethrow the error
+    // throw error; // Rethrow the error
   }
 }
