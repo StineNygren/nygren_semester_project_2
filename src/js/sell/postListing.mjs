@@ -5,6 +5,7 @@ import {
   description_input,
   title_input,
   url_input_container,
+  sell_error,
 } from "../utils/domElements.mjs";
 
 function postListing() {
@@ -12,7 +13,7 @@ function postListing() {
     e.preventDefault();
 
     const imageInputs = Array.from(
-      url_input_container.querySelectorAll("input[name='url_input[]']")
+      url_input_container.querySelectorAll("input[name='url_input[]']"),
     );
     const imageUrls = imageInputs.map((input) => input.value);
 
@@ -23,9 +24,26 @@ function postListing() {
       media: imageUrls,
     };
 
-    const result = await fetchBase("listings", "POST", body);
+    sell_error.innerHTML = "";
 
-    window.location.href = `./listing.html?id=${result.id}`;
+    try {
+      const result = await fetchBase("listings", "POST", body);
+      console.log(result.errors);
+
+      if (result.status === "Bad Request") {
+        const sellErrors = result.errors.map((error) => error.message);
+        console.log(sellErrors);
+
+        sellErrors.forEach((error) => {
+          console.log(error);
+          sell_error.innerHTML += `<p class="text-red-600">${error}</p>`;
+        });
+      } else {
+        window.location.href = `./listing.html?id=${result.id}`;
+      }
+    } catch (error) {
+      console.error(error);
+    }
   });
 }
 

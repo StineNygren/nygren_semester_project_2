@@ -69,6 +69,7 @@ export const date_input = document.querySelector("#date_input");
 export const description_input = document.querySelector("#description_input");
 export const title_input = document.querySelector("#title_input");
 export const post_listing_btn = document.querySelector("#post_listing_btn");
+export const sell_error = document.querySelector("#sell_error");
 //profile
 export const profile_name = document.querySelector("#profile_name");
 export const profile_avatar = document.querySelector("#profile_avatar");

@@ -28,6 +28,6 @@ export async function fetchBase(endPoint, method, body) {
     return result;
   } catch (error) {
     console.error(error);
-    // throw error; // Rethrow the error
+    throw error; // Rethrow the error
   }
 }
