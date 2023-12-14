@@ -24,20 +24,26 @@ function postListing() {
       media: imageUrls,
     };
 
-    const result = await fetchBase("listings", "POST", body);
-    console.log(result.errors);
+    sell_error.innerHTML = "";
 
-    const sellErrors = result.errors.map((error) => error.message);
-    console.log(sellErrors);
+    try {
+      const result = await fetchBase("listings", "POST", body);
+      console.log(result.errors);
 
-    sellErrors.forEach((error) => {
-      console.log(error);
-      sell_error.innerHTML += `<p class="text-red-600">${error}</p>`;
-    });
+      if (result.status === "Bad Request") {
+        const sellErrors = result.errors.map((error) => error.message);
+        console.log(sellErrors);
 
-    //sell_error.innerHTML = result.errors[0].message;
-
-    //window.location.href = `./listing.html?id=${result.id}`;
+        sellErrors.forEach((error) => {
+          console.log(error);
+          sell_error.innerHTML += `<p class="text-red-600">${error}</p>`;
+        });
+      } else {
+        window.location.href = `./listing.html?id=${result.id}`;
+      }
+    } catch (error) {
+      console.error(error);
+    }
   });
 }
 
