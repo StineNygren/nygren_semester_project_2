@@ -12,8 +12,20 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 let postId = urlParams.get("id");
 
-function placeBid(bids) {
-  if (!jwt) {
+function placeBid(bids, endsAt, seller) {
+  const listingUserName = seller.name;
+  const listingEndsAt = new Date(endsAt).getTime();
+  const currentDate = new Date().getTime();
+
+  let expired = false;
+
+  if (currentDate > listingEndsAt) {
+    expired = true;
+  }
+
+  console.log(listingEndsAt);
+  console.log(listingUserName);
+  if (!jwt || user === listingUserName || expired === true) {
     bid_btn.disabled = true;
     bid_input.disabled = true;
     bid_btn.classList.add("opacity-50");

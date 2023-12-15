@@ -11,12 +11,14 @@ let postId = urlParams.get("id");
 async function fetchListing() {
   const result = await fetchBase(
     `listings/${postId}?_seller=true&_bids=true`,
-    "GET"
+    "GET",
   );
+
+  console.log(result);
   imageCarousel(result.media, result.title);
   listingTexst(result);
   timeLeft(result.endsAt);
-  placeBid(result.bids);
+  placeBid(result.bids, result.endsAt, result.seller);
 
   return result;
 }
